@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/d4ywalkr/renzel_view_tool
+  revision: 31afb55a0774fbc9e63ecc854c25b54f0283d5b9
+  specs:
+    renzel_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -202,6 +208,7 @@ DEPENDENCIES
   pry-byebug
   puma (~> 3.7)
   rails (~> 5.1.6)
+  renzel_view_tool!
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
