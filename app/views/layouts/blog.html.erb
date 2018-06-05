@@ -16,9 +16,30 @@
   <body>
     <div class="container">
 
+      <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-4 pt-1">
+            <%= link_to 'Write a new blog', new_blog_path, class: "text-muted" if logged_in?(:site_admin) %>
+          </div>
+          <div class="col-4 text-center">
+            <a class="blog-header-logo text-dark" href="#">My Blog</a>
+          </div>
+          <div class="col-4 d-flex justify-content-end align-items-center">
+            <%= login_helper "btn btn-sm btn-outline-secondary" %>
+          </div>
+        </div>
+      </header>
+
       <%= render "shared/blog_nav" %>
 
-      <!-- Start of main container -->
+      <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+        <div class="col-md-6 px-0">
+          <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
+          <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.</p>
+          <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
+        </div>
+      </div>
+
       <main role="main" class="container">
         <div class="row">
 
@@ -56,7 +77,8 @@
                 <li><a href="#">Facebook</a></li>
               </ol>
             </div>
-          </aside><!-- /.blog-sidebar -->
+          </aside>
+        </div>
 
           <footer class="blog-footer">
             <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
@@ -65,14 +87,9 @@
             </p>
           </footer>
 
-          <%= render "shared/navigation", location: 'bottom' %>
-
           <%= source_helper("blog") %>
 
-        </div>
       </main>
-      <!-- End of main container -->
-
     </div>
   </body>
 </html>
