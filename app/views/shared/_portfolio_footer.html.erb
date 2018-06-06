@@ -1,6 +1,9 @@
 <footer class="text-muted">
   <div class="container">
     <p class="float-right">
+      <% unless params[:id].nil? %>
+        <%= link_to "View all portfolio items", portfolios_path %> /
+      <% end %>
       <a href="#">Back to top</a>
     </p>
     <p><%= copyright_generator %></p>
