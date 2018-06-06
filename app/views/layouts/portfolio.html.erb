@@ -19,7 +19,7 @@
 
     <main role="main">
 
-      <%= render "shared/portfolio_masthead" %>
+      <%= render "shared/portfolio_masthead" if request.original_fullpath.eql?("/portfolios") %>
 
       <%= yield %>
 
