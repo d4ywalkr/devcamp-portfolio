@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "font-awesome";
 
 
 :root {
@@ -40,3 +41,11 @@ footer p {
 }
 
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+/*
+ * Custom styles
+ */
+
+ .navbar-brand i {
+   font-size: 1.5em;
+ }
