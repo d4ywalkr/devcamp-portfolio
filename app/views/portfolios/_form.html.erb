@@ -15,13 +15,11 @@
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">
-        <%= form.label :title %>
-        <%= form.text_field :title, id: :portfolio_title, class: "form-control" %>
+        <%= form.text_field :title, id: :portfolio_title, class: "form-control", placeholder: 'Title' %>
       </div>
 
       <div class="form-group">
-        <%= form.label :subtitle %>
-        <%= form.text_field :subtitle, id: :portfolio_title, class: "form-control" %>
+        <%= form.text_field :subtitle, id: :portfolio_subtitle, class: "form-control", placeholder: 'Subtitle' %>
       </div>
 
       <div class="form-group">
@@ -39,8 +37,7 @@
 
     <div class="col-md-6">
       <div class="form-group">
-        <%= form.label :body %>
-        <%= form.text_area :body, id: :portfolio_body, class: "form-control", rows: 14 %>
+        <%= form.text_area :body, id: :portfolio_body, class: "form-control", rows: 14, placeholder: 'Content' %>
       </div>
     </div>
   </div>
@@ -50,12 +47,13 @@
   <div class="col-md-12">
     <h2>Technologies Used</h2>
     <div>
-      <%= form.fields_for :technologies do |t| %>
-        <div class="form-group">
-          <%= t.label :name %>
-          <%= t.text_field :name, id: :technology_name, class: "form-control" %>
-        </div>
+      <%= form.fields_for :technologies do |technology_form| %>
+        <%= render "technology_fields", f: technology_form %>
       <% end %>
+
+      <div>
+        <%= link_to_add_association "Add Technology", form, :technologies %>
+      </div>
     </div>
 
     <div class="form-group">
