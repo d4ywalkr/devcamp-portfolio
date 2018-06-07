@@ -19,7 +19,7 @@
 
     <main role="main">
 
-      <%= render "shared/portfolio_masthead" if request.original_fullpath.eql?("/portfolios") %>
+      <%= render "shared/portfolio_masthead" unless ['new', 'edit'].any? { |i| request.original_fullpath.include?(i)} %>
 
       <%= yield %>
 
