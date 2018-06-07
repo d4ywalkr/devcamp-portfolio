@@ -19,6 +19,13 @@
       <% @portfolio_item.technologies.each do |t| %>
         <p><%= t.name %></p>
       <% end %>
+
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <%= link_to "Edit", edit_portfolio_path(@portfolio_item),
+            class: "btn btn-sm btn-outline-secondary" if logged_in?(:site_admin) %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
