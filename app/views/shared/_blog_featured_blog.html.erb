@@ -1,0 +1,9 @@
+<% if @featured_blog %>
+  <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 font-italic"><%= @featured_blog.title %></h1>
+      <p class="lead my-3"><%= @featured_blog.body.slice(0, 144) %> ...</p>
+      <p class="lead mb-0"><%= link_to "Continue reading...", @featured_blog, class: "text-white" %></p>
+    </div>
+  </div>
+<% end %>
