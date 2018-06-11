@@ -41,7 +41,7 @@ body {
 }
 
 .cover-container {
-  max-width: 55em;
+  max-width: 65em;
 }
 
 
@@ -78,7 +78,7 @@ body {
   border-bottom-color: #fff;
 }
 
-@media (min-width: 55em) {
+@media (min-width: 65em) {
   .masthead-brand {
     float: left;
   }
@@ -152,4 +152,17 @@ body {
 
 .app-footer {
   color: white;
+}
+
+.tech-news {
+  color: black;
+  margin: 20px;
+}
+
+.tech-news a {
+  color: blue;
+}
+
+.tech-news > .card {
+  padding: 30px;
 }
