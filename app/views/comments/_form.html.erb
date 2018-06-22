@@ -1,5 +1,5 @@
 <% unless current_user.is_a? GuestUser %>
-  <%= form_with(model: @comment, local: true, url: '#') do |form| %>
+  <%= form_with(model: @comment, html: { id: "new_comment" }, url: '#') do |form| %>
 
     <div class="form-group">
       <%= form.label :content %>
